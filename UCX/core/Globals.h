@@ -50,22 +50,6 @@ DWORD* lastRadarPrintTime() {
 	return (DWORD *)0xDD0300;
 }
 
-byte* EnvironStyle() {
-	return (byte*)0x4EE375;
-}
-
-int* Ambient_R() {
-	return (int*)0x8F1658;
-}
-
-int* Ambient_G() {
-	return (int*)0x8F15DC;
-}
-
-int* Ambient_B() {
-	return (int*)0x8DCB7C;
-}
-
 byte* showFPS() {
 	return (byte*)0x8AA2B8;
 }
@@ -124,57 +108,6 @@ const int colourFadeLevel() {
 
 blob** arrOfObjects() {
 	return (blob **)0x707704;
-}
-
-static byte * KeyState = (byte *)(0x01B020E8);
-
-bool isKeyDown(const byte idx) {
-	return !!KeyState[idx];
-}
-
-void unsetKey(const byte idx) {
-	KeyState[idx] = 0;
-}
-
-static WORD * ClassHealthMax = (WORD *)(0x4F198C);
-
-short maxClassHealth(const byte idx) {
-	return ClassHealthMax[idx];
-}
-
-void __cdecl Spawn_Water(const short posX, const short posY, const short posZ,
-	  const int unk0, const int unkA, const int unkB, const int unkC) {
-	JMP_STD(0x416F90);
-}
-
-void __cdecl Spawn_Light(const int posX, const int posY, const int posZ,
-	  const byte state, const short colR, const short colG, const short colB) {
-	JMP_STD(0x440860);
-}
-
-void Ambient_Update() {
-	CALL(0x04426C0);
-	CALL(0x0442BA0);
-	CALL(0x0444620);
-}
-
-void Ambient_Set(const int R, const int G, const int B) {
-	*Ambient_R() = R;
-	*Ambient_G() = G;
-	*Ambient_B() = B;
-	Ambient_Update();
-}
-
-void __cdecl Radio_Echo(char *string, int duration) {
-	JMP_STD(0x495F50);
-}
-
-void ScreenShot() {
-	CALL(0x412B00);
-}
-
-void Mission_Restart() {
-	CALL(0x41C620);
 }
 
 #endif

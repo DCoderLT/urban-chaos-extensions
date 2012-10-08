@@ -21,7 +21,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
@@ -36,14 +36,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>c:\Program Files (x86)\Microsoft SDKs\DirectX\7.0\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>c:\Program Files (x86)\Microsoft SDKs\DirectX\7.0\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);NOMINMAX;_UNICODE;UNICODE</PreprocessorDefinitions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <StructMemberAlignment>4Bytes</StructMemberAlignment>
       <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
     </ClCompile>
     <Link>
@@ -56,31 +61,113 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);NOMINMAX;_UNICODE;UNICODE</PreprocessorDefinitions>
+      <StructMemberAlignment>4Bytes</StructMemberAlignment>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="core\ASMMacros.h" />
     <ClInclude Include="core\CRT.h" />
     <ClInclude Include="core\DisplayManager.h" />
+    <ClInclude Include="core\fae\Animal.h" />
+    <ClInclude Include="core\fae\AttachedPtr.h" />
+    <ClInclude Include="core\fae\Balloon.h" />
+    <ClInclude Include="core\fae\Barrel.h" />
+    <ClInclude Include="core\fae\BarrelSphere.h" />
+    <ClInclude Include="core\fae\Bat.h" />
+    <ClInclude Include="core\fae\Chopper.h" />
+    <ClInclude Include="core\fae\CutsceneData.h" />
+    <ClInclude Include="core\fae\CutscenePkt.h" />
+    <ClInclude Include="core\fae\CutsceneText.h" />
+    <ClInclude Include="core\fae\CutsceneTrk.h" />
+    <ClInclude Include="core\fae\DarciNormal.h" />
+    <ClInclude Include="core\fae\DBuilding.h" />
+    <ClInclude Include="core\fae\DFacet.h" />
+    <ClInclude Include="core\fae\DrawMesh.h" />
+    <ClInclude Include="core\fae\DrawTween.h" />
+    <ClInclude Include="core\fae\DStorey.h" />
+    <ClInclude Include="core\fae\DStyle.h" />
+    <ClInclude Include="core\fae\DWalkable.h" />
+    <ClInclude Include="core\fae\EwayCond.h" />
+    <ClInclude Include="core\fae\EwayCounter.h" />
+    <ClInclude Include="core\fae\EwayEdef.h" />
+    <ClInclude Include="core\fae\EwayMess.h" />
+    <ClInclude Include="core\fae\EwayTimer.h" />
+    <ClInclude Include="core\fae\EwayWay.h" />
+    <ClInclude Include="core\fae\EwayWay_Effect.h" />
+    <ClInclude Include="core\fae\EwayWay_Predicate.h" />
+    <ClInclude Include="core\fae\EwayWay_RepeatConfig.h" />
+    <ClInclude Include="core\fae\FastNav.h" />
+    <ClInclude Include="core\fae\FLink.h" />
+    <ClInclude Include="core\fae\InsideBlock.h" />
+    <ClInclude Include="core\fae\InsideStair.h" />
+    <ClInclude Include="core\fae\InsideStorey.h" />
+    <ClInclude Include="core\fae\MapBeacon.h" />
+    <ClInclude Include="core\fae\MavNav.h" />
+    <ClInclude Include="core\fae\MavOpt.h" />
+    <ClInclude Include="core\fae\NetPeep.h" />
+    <ClInclude Include="core\fae\NetPlyr.h" />
+    <ClInclude Include="core\fae\NightDLight.h" />
+    <ClInclude Include="core\fae\NightSlight.h" />
+    <ClInclude Include="core\fae\NightSmap.h" />
+    <ClInclude Include="core\fae\ObMapWho.h" />
+    <ClInclude Include="core\fae\ObOb.h" />
+    <ClInclude Include="core\fae\PaintMem.h" />
+    <ClInclude Include="core\fae\PapHi.h" />
+    <ClInclude Include="core\fae\PapLo.h" />
+    <ClInclude Include="core\fae\People.h" />
+    <ClInclude Include="core\fae\PersonComboInfo.h" />
+    <ClInclude Include="core\fae\Plat.h" />
+    <ClInclude Include="core\fae\Player.h" />
+    <ClInclude Include="core\fae\PrimFace3.h" />
+    <ClInclude Include="core\fae\PrimFace4.h" />
+    <ClInclude Include="core\fae\PrimInfo.h" />
+    <ClInclude Include="core\fae\PrimMObject.h" />
+    <ClInclude Include="core\fae\PrimObject.h" />
+    <ClInclude Include="core\fae\PrimPoint.h" />
+    <ClInclude Include="core\fae\Projectile.h" />
+    <ClInclude Include="core\fae\Pyro.h" />
+    <ClInclude Include="core\fae\RoadEdge.h" />
+    <ClInclude Include="core\fae\RoadNoAd.h" />
+    <ClInclude Include="core\fae\RoofBound.h" />
+    <ClInclude Include="core\fae\RoofFace4.h" />
+    <ClInclude Include="core\fae\Special.h" />
+    <ClInclude Include="core\fae\Switch.h" />
+    <ClInclude Include="core\fae\Thing.h" />
+    <ClInclude Include="core\fae\ThingHead.h" />
+    <ClInclude Include="core\fae\Track.h" />
+    <ClInclude Include="core\fae\TripWire.h" />
+    <ClInclude Include="core\fae\Vehicle.h" />
+    <ClInclude Include="core\fae\WareHeight.h" />
+    <ClInclude Include="core\fae\WareNav.h" />
+    <ClInclude Include="core\fae\WareRooftex.h" />
+    <ClInclude Include="core\fae\WareWare.h" />
+    <ClInclude Include="core\fae\WMove.h" />
+    <ClInclude Include="core\fae\_fae.h" />
+    <ClInclude Include="core\FileSystem.h" />
     <ClInclude Include="core\Generic.h" />
+    <ClInclude Include="core\Geometry.h" />
     <ClInclude Include="core\Globals.h" />
     <ClInclude Include="core\Hashmap.h" />
     <ClInclude Include="core\hookdecl.h" />
-    <ClInclude Include="core\Keymaps.h" />
+    <ClInclude Include="core\INI.h" />
+    <ClInclude Include="core\Keyboard.h" />
     <ClInclude Include="core\Magic.h" />
     <ClInclude Include="core\Mission.h" />
+    <ClInclude Include="core\Net.h" />
     <ClInclude Include="core\Radar.h" />
+    <ClInclude Include="core\Radio.h" />
     <ClInclude Include="core\Screen.h" />
     <ClInclude Include="core\Screenshots.h" />
     <ClInclude Include="core\Statics.h" />
     <ClInclude Include="core\Syringe.h" />
+    <ClInclude Include="core\Unsorted.h" />
     <ClInclude Include="ext\Debug.h" />
     <ClInclude Include="ext\FileSystem.h" />
+    <ClInclude Include="ext\Screen.h" />
     <ClInclude Include="ext\ScreenMessage.h" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +176,9 @@
     <ClCompile Include="ext\Everything.cpp" />
     <ClCompile Include="ext\FileSystem.cpp" />
     <ClCompile Include="ext\Mission.cpp" />
+    <ClCompile Include="ext\Net.cpp" />
+    <ClCompile Include="ext\Safeguards.cpp" />
+    <ClCompile Include="ext\Screen.cpp" />
     <ClCompile Include="ext\ScreenMessage.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

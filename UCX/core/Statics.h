@@ -5,18 +5,23 @@
 
 #include <windows.h>
 
+namespace UCX {
+	namespace Core {
 
-namespace Statics {
-	extern WNDCLASSA &gWndClass;
-	extern HINSTANCE &hInstance;
-	extern HWND &hWnd;
+		namespace Statics {
+			extern WNDCLASSA &gWndClass;
+			extern HINSTANCE &hInstance;
+			extern HWND &hWnd;
 
-	extern bool &gFixDirectX;
+			extern bool &gFixDirectX;
 
-	void SetInitialValues();
+			void SetInitialValues();
 
-	extern char * KeyBuffer1;
-	extern char * KeyBuffer2;
+			extern char * KeyBuffer1;
+			extern char * KeyBuffer2;
+		};
+
+	};
 };
 
 #endif

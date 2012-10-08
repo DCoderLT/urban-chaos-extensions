@@ -9,7 +9,7 @@
 #include "ScreenMessage.h"
 
 #include "../core/Globals.h"
-#include "../core/Keymaps.h"
+#include "../core/Keyboard.h"
 
 using namespace UCX::Core;
 using namespace UCX::Ext;
@@ -48,16 +48,13 @@ DEFINE_HOOK(0x490EC3, Radar_Draw, 6)
 {
 	for(unsigned int i = ScreenMessage::Messages.size(); i > 0; --i) {
 		auto idx = i - 1;
-		Debug::Log("First loop pass over message %d\n", idx);
 		ScreenMessage *msg = ScreenMessage::Messages[idx];
 		if(msg->TimeToDie()) {
-			Debug::Log("Deleting message %d\n", idx);
 			delete msg;
 		}
 	}
 
 	for(unsigned int i = 0; i < ScreenMessage::Messages.size(); ++i) {
-		Debug::Log("Second loop pass over message %d\n", i);
 		ScreenMessage::Messages[i]->Update();
 	}
 
@@ -179,6 +176,7 @@ DEFINE_HOOK(0x412B00, Engine_MakeScreenshot, 0)
 	return 0x412BB6;
 }
 
+#include "../core/fae/Thing.h"
 
 // cheat controller
 DEFINE_HOOK(0x41243D, Debug_TextEntered, 5)
@@ -187,29 +185,30 @@ DEFINE_HOOK(0x41243D, Debug_TextEntered, 5)
 
 	new ScreenMessage(input, 0xFF, 0xFF, 0xFF);
 
+	auto p = fae::Thing::Instances;
+
 	return 0x41244F;
 }
 
 // keypress controller
 DEFINE_HOOK(0x413ADF, Debug_ProcessKeypresses_ProcessCustomPresses, 6)
 {
-	auto k = static_cast<byte>(PressedKey::KEY_TILDE);
+	auto k = static_cast<byte>(Keyboard::PressedKey::KEY_TILDE);
 
-	if(isKeyDown(k)) {
+	if(Keyboard::isKeyDown(k)) {
 		wchar_t Filename[0x1000];
 		Debug::CreateDump(NULL, Filename);
 		char Message[0x2000];
 		_snprintf(Message, 0x2000, "Memory dump written to %ls", Filename);
 
-		unsetKey(k);
+		Keyboard::unsetKey(k);
 	}
 
 	return 0;
 }
 
-
 #if 0
-DEFINE_HOOK(0x4129AE, Debug_TextEntered, 6)
+DEFINE_HOOK(0x4129AE, Debug_TextEntered_ModelChange, 6)
 {
 	byte * ptr1 = (byte *)0x4F196C;
 	byte * ptr2 = (byte *)0x8A9DB8;
@@ -252,3 +251,4 @@ DEFINE_HOOK(0x4887C2, sub_488780, 9)
 	R->ECX(5);
 	return 0x488819;
 }
+

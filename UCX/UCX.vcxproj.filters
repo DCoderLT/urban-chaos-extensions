@@ -33,9 +33,6 @@
     <ClInclude Include="core\Hashmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="core\Keymaps.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="core\Magic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -69,6 +66,255 @@
     <ClInclude Include="core\hookdecl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="core\Unsorted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Radio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\INI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\FileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Thing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DrawTween.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\AttachedPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Balloon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Barrel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\BarrelSphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Bat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Chopper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\CutsceneData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\CutscenePkt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\CutsceneText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\CutsceneTrk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DarciNormal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DBuilding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DFacet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DrawMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DStorey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DStyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\DWalkable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayCond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayCounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayEdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayMess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayWay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\FastNav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\FLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\InsideBlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\InsideStair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\InsideStorey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\MapBeacon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\MavNav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\MavOpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\NetPeep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\NetPlyr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\NightDLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\NightSlight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\NightSmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\ObMapWho.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\ObOb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PaintMem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PapHi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PapLo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\People.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PersonComboInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Plat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimFace3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimFace4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimMObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\PrimPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Pyro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\RoadEdge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\RoadNoAd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\RoofBound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\RoofFace4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Special.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Switch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\ThingHead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\TripWire.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\Vehicle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\WareHeight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\WareNav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\WareRooftex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\WareWare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\WMove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\_fae.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayWay_Effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayWay_Predicate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fae\EwayWay_RepeatConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\Screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\Statics.cpp">
@@ -87,6 +333,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ext\Everything.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\Safeguards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\Screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\Net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -8,6 +8,9 @@
 #pragma warning(disable : 4100) /* unreferenced formal parameter */
 #pragma warning(disable : 4731) /* frame pointer register modified by inline assembly code */
 
+typedef signed __int8 SBYTE;
+typedef signed __int16 SWORD;
+typedef signed __int32 SDWORD;
 
 typedef unsigned char BYTE;
 typedef unsigned short WORD;

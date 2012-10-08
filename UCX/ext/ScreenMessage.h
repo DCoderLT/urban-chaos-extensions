@@ -6,6 +6,8 @@
 #include "../core/DisplayManager.h"
 #include "../core/Screen.h"
 
+using namespace UCX::Core;
+
 namespace UCX {
 	namespace Ext {
 

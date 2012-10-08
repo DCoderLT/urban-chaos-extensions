@@ -3,8 +3,14 @@
 
 #include "Generic.h"
 
-namespace Magic {
-	extern WORD &SlowdownRemaining;
+namespace UCX {
+	namespace Core {
+
+		namespace Magic {
+			extern WORD &SlowdownRemaining;
+		};
+
+	};
 };
 
 #endif
